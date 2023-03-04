@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Convid</title>
+    <title>OpenSearch31</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -84,8 +84,7 @@
             background-color: #45a049;
         }
         
-        input[type=text]:focus,
-        input[type=email]:focus,
+        input[type=text]:focus input[type=email]:focus,
         input[type=number]:focus {
             border: 2px solid #4CAF50;
         }
@@ -120,10 +119,10 @@
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
                                 <a href="index.html">Home</a>
-                                <a href="protect.html">Search data</a>
-                                <a href="about.html">Add data</a>
-                                <a href="doctors.html">Remove</a>
-                                <a href="news.html">News</a>
+                                <a href="protect.html">search data</a>
+                                <a href="about.html">add data</a>
+                                <!-- <a href="doctors.html">remove</a> -->
+                                <!-- <a href="news.html">News</a> -->
                             </div>
                         </div>
                         <span class="navbar-toggler-icon"></span>
@@ -142,23 +141,23 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="container">
-                                        <h1 class="banner_taital">Surf the OpenSearch42</h1>
+                                        <h1 class="banner_taital">Surf the OpenSearch31</h1>
                                         <p class="banner_text">We have many sites, search by city, title, label.</p>
                                         <div class="more_bt"><a href="#protect_section layout_padding">Surf now</a></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="banner_img"><img src="images/banner-img.png"></div>
+                                    <!-- <div class="banner_img"><img src="images/banner-img.png"></div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
+                    <!-- <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev"> -->
+                    <!-- <i class="fa fa-angle-left"></i> -->
+                    <!-- </a> -->
+                    <!-- <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next"> -->
+                    <!-- <i class="fa fa-angle-right"></i> -->
+                    <!-- </a> -->
                 </div>
             </div>
         </div>
@@ -240,24 +239,21 @@
                     </span>
                 </h1>
                 <!-- <div class="col-md-5"> -->
-
                 <!-- <div class="about_img"><img src="images/img-1.png"></div> -->
                 <!-- </div> -->
-                <div class="col-md-6">
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                        <label for="age">Age:</label>
-                        <input type="number" id="age" name="age" required>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                        <button type="button" onclick="addDataPoint()">Add Data Point</button>
-                    </form>
-                    <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
-                </div>
+                    <button type="button" onclick="addDataPoint()">Add Data Point</button>
+                </form>
+                <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
             </div>
         </div>
     </div>
@@ -274,20 +270,8 @@
         <div class="container">
             <div class="footer_section_2">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-md-6">
 
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <h2 class="useful_text">Contact Us</h2>
-                        <div class="location_text">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <h2 class="useful_text">countrys</h2>
-                        <div class="map_image"><img src="images/map-bg.png"></div>
                     </div>
                 </div>
             </div>
@@ -299,7 +283,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <!-- <p class="copyright_text">© 2020 All Rights Reserved.<a href="https://html.design"> Free  html Templates</a></p> -->
+                    <p class="copyright_text">Creative Commons 2023 <a href="https://html.design"> An OpenSearch31 website</a></p>
                 </div>
             </div>
         </div>
@@ -317,6 +301,65 @@
     <!-- javascript -->
     <script src="js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <!-- Our code here -->
+    <script>
+        function addDataPoint() {
+            var nameInput = document.getElementById("name");
+            var ageInput = document.getElementById("age");
+            var emailInput = document.getElementById("email");
+
+            // Get the table and insert a new row
+            var table = document.getElementById("dataTable");
+            var row = table.insertRow(-1);
+
+            // Insert the new row with data from the input fields
+            var id = table.rows.length - 1;
+            var idCell = row.insertCell(0);
+            var nameCell = row.insertCell(1);
+            var ageCell = row.insertCell(2);
+            var emailCell = row.insertCell(3);
+            idCell.innerHTML = id;
+            nameCell.innerHTML = nameInput.value;
+            ageCell.innerHTML = ageInput.value;
+            emailCell.innerHTML = emailInput.value;
+
+            // Clear the input fields
+            nameInput.value = "";
+            ageInput.value = "";
+            emailInput.value = "";
+        }
+
+
+        // Get the input field
+        var input = document.getElementById("searchInput");
+
+        // Add event listener for input
+        input.addEventListener("input", function() {
+            searchTable();
+        });
+
+        function searchTable() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those that don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
     <script>
         $(document).ready(function() {
             $(".fancybox").fancybox({
@@ -342,6 +385,7 @@
             document.getElementById("myNav").style.width = "0%";
         }
     </script>
+
 </body>
 
 </html>

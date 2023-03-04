@@ -15,62 +15,6 @@
 
 
     <script>
-        function addDataPoint() {
-            var nameInput = document.getElementById("name");
-            var ageInput = document.getElementById("age");
-            var emailInput = document.getElementById("email");
-
-            // Get the table and insert a new row
-            var table = document.getElementById("dataTable");
-            var row = table.insertRow(-1);
-
-            // Insert the new row with data from the input fields
-            var id = table.rows.length - 1;
-            var idCell = row.insertCell(0);
-            var nameCell = row.insertCell(1);
-            var ageCell = row.insertCell(2);
-            var emailCell = row.insertCell(3);
-            idCell.innerHTML = id;
-            nameCell.innerHTML = nameInput.value;
-            ageCell.innerHTML = ageInput.value;
-            emailCell.innerHTML = emailInput.value;
-
-            // Clear the input fields
-            nameInput.value = "";
-            ageInput.value = "";
-            emailInput.value = "";
-        }
-
-
-        // Get the input field
-        var input = document.getElementById("searchInput");
-
-        // Add event listener for input
-        input.addEventListener("input", function() {
-            searchTable();
-        });
-
-        function searchTable() {
-            // Declare variables
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("dataTable");
-            tr = table.getElementsByTagName("tr");
-
-            // Loop through all table rows, and hide those that don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
     </script>
 </body>
 
