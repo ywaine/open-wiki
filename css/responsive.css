@@ -128,143 +128,111 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
     .logo {
         width: 81%;
     }
-
     .banner_taital {
         width: 70%;
         font-size: 34px;
         line-height: 40px;
         padding-top: 0px;
     }
-
     .banner_text {
         width: 100%;
         margin: 0px;
     }
-
     .banner_img {
         width: 60%;
         text-align: center;
     }
-
     .banner_section {
         padding: 80px 0px;
     }
-
     .hands_text {
         width: 81%;
         padding-top: 0px;
     }
-
     .hands_text_2 {
         width: 60%;
         margin: 40px 50px;
     }
-
     .hands_text_2::after {
         width: 90px;
         right: -130px;
     }
-
     .hands_text::after {
         width: 120px;
         right: -110px;
     }
-
     .about_taital {
         width: 100%;
         font-size: 36px;
     }
-
     .about_text {
         width: 100%;
     }
-
     .doctors_section {
         background-size: cover;
     }
-
     .play_icon::before {
         left: 67px;
     }
-
-
-
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
     #my_slider a.carousel-control-next {
         top: 122%;
     }
-
     #my_slider a.carousel-control-prev {
         top: 122%;
     }
-
     #main_slider a.carousel-control-prev {
         position: absolute;
         left: -60px;
         right: 0px;
         top: 105%;
     }
-
     #main_slider a.carousel-control-next {
         position: absolute;
         left: 0px;
         right: -60px;
         top: 105%;
     }
-
     .shoping_bag {
         display: none;
     }
-
     .header_section {
         background-size: cover;
     }
-
     .toggle_menu_1 {
         display: block;
         top: 5px;
         position: relative;
         float: right;
     }
-
     .menu_main {
         display: none;
     }
-
     .logo {
         width: auto;
     }
-
     .banner_taital {
         font-size: 40px;
         padding-top: 0px;
     }
-
     .banner_text {
         width: 100%;
     }
-
     .banner_img {
         width: 100%;
         margin-top: 40px;
     }
-
     .protect_text {
         width: 100%;
     }
-
     .protect_taital {
         font-size: 26px;
     }
-
     .hands_text {
         width: 73%;
         font-size: 22px;
@@ -274,7 +242,6 @@
         width: 120px;
         right: -110px;
     }
-
     .hands_text_2 {
         width: 75%;
         font-size: 22px;
@@ -284,55 +251,43 @@
         width: 100px;
         right: -80px;
     }
-
     .about_taital {
         width: 100%;
         font-size: 26px;
         padding-top: 0px;
     }
-
     .about_text {
         width: 100%;
     }
-
     .doctor_text {
         width: 100%;
         font-size: 14px;
     }
-
     .news_section {
         background-size: cover;
     }
-
     .news_taital {
         font-size: 26px;
     }
-
     .news_text {
         width: 100%;
     }
-
     .box_main {
         width: 97%;
     }
-
     .update_taital {
         font-size: 26px;
     }
-
     .update_mail {
         width: 90%;
     }
-
-    .doctors_section{
+    .doctors_section {
         background-size: cover;
         background-image: linear-gradient(90deg, #7d56c9 18%, rgba(76, 90, 90, 0) 4%), url(../images/doctor-bg1.png);
     }
-
     .play_icon::before {
         left: 51px;
     }
-
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -342,133 +297,105 @@
         right: 0px;
         top: 105%;
     }
-
     #main_slider a.carousel-control-next {
         position: absolute;
         left: 0px;
         right: -60px;
         top: 105%;
     }
-
     .shoping_bag {
         display: none;
     }
-
     .header_section {
         background-size: cover;
     }
-
     .toggle_menu_1 {
         display: block;
         top: 5px;
         position: relative;
         float: right;
     }
-
     .menu_main {
         display: none;
     }
-
     .logo {
         width: auto;
     }
-
     .banner_taital {
         font-size: 40px;
         padding-top: 0px;
     }
-
     .banner_text {
         width: 100%;
     }
-
     .banner_img {
         width: 100%;
         margin-top: 40px;
     }
-
     #my_slider a.carousel-control-next {
         top: 112%;
     }
-
     #my_slider a.carousel-control-prev {
         top: 112%;
     }
-
     .protect_text {
         width: 100%;
     }
-
     .protect_taital {
         font-size: 30px;
     }
-
-    .hands_text_2{
+    .hands_text_2 {
         display: none;
     }
-
-    .hands_text{
+    .hands_text {
         display: none;
     }
-
-    .about_section .row{
+    .about_section .row {
         display: flex;
         flex-direction: column-reverse;
+        padding-bottom: 10px;
     }
-
     .about_taital {
         width: 100%;
         font-size: 30px;
         padding-top: 0px;
     }
-
     .about_text {
         width: 100%;
     }
-
     .about_img {
         margin-top: 40px;
     }
-
-    .taital_left{
+    .taital_left {
         display: none;
     }
-
     .taital_right {
         width: 100%;
         padding-left: 0px;
     }
-
     .doctors_section {
         background-image: url(../images/doctor-bg1.png) !important;
         background-size: cover;
     }
-
     .doctor_text {
         width: 100%;
         font-size: 14px;
     }
-
     .news_section {
         background-size: cover;
     }
-
     .news_taital {
         font-size: 30px;
     }
-
     .news_text {
         width: 100%;
     }
-
     .box_main {
         width: 97%;
     }
-
     .update_taital {
         font-size: 30px;
     }
-
     .update_mail {
         width: 100%;
     }
@@ -481,150 +408,114 @@
         right: 0px;
         top: 105%;
     }
-
     #main_slider a.carousel-control-next {
         position: absolute;
         left: 0px;
         right: -60px;
         top: 105%;
     }
-
     .shoping_bag {
         display: none;
     }
-
     .header_section {
         background-size: cover;
     }
-
     .toggle_menu_1 {
         display: block;
         top: 5px;
         position: relative;
         float: right;
     }
-
     .toggle_menu {
-    top: 8px;
-    position: relative;
-    left: 0px;
-    display: none;
-}
-
+        top: 8px;
+        position: relative;
+        left: 0px;
+        display: none;
+    }
     .menu_main {
         display: none;
     }
-
     .logo {
         width: auto;
     }
-
     .menu_main {
         display: none;
     }
-
     .banner_taital {
         font-size: 40px;
         padding-top: 0px;
     }
-
     .banner_text {
         width: 100%;
     }
-
     .banner_img {
         width: 100%;
         margin-top: 40px;
     }
-
     #my_slider a.carousel-control-next {
         top: 112%;
     }
-
     #my_slider a.carousel-control-prev {
         top: 112%;
     }
-
     .protect_text {
         width: 100%;
     }
-
     .protect_taital {
         font-size: 24px;
     }
-
-    .hands_text_2{
+    .hands_text_2 {
         display: none;
     }
-
-    .hands_text{
+    .hands_text {
         display: none;
     }
-
     .about_section .row {
         display: flex;
         flex-direction: column-reverse;
     }
-
     .about_taital {
         width: 100%;
         font-size: 24px;
         padding-top: 0px;
     }
-
     .about_text {
         width: 100%;
     }
-
     .about_img {
         margin-top: 40px;
     }
-
-    .taital_left{
+    .taital_left {
         display: none;
     }
-
     .taital_right {
         width: 100%;
         padding-left: 0px;
     }
-
     .doctors_section {
         background-image: url(../images/doctor-bg1.png) !important;
         background-size: cover;
     }
-
     .doctor_text {
         width: 100%;
         font-size: 14px;
     }
-
     .news_section {
         background-size: cover;
     }
-
     .news_taital {
         font-size: 30px;
     }
-
     .news_text {
         width: 100%;
     }
-
     .box_main {
         width: 97%;
     }
-
     .update_taital {
         font-size: 28px;
     }
-
     .update_mail {
         width: 100%;
     }
-
-
-
-
-
 }

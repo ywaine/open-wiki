@@ -308,7 +308,8 @@ button {
     position: relative;
     left: 0px;
 }
-.toggle_menu_1{
+
+.toggle_menu_1 {
     display: none;
 }
 
@@ -404,10 +405,9 @@ menu_text {
     left: 0px;
     right: -60px;
     top: 118%;
-
 }
 
-#my_slider .carousel-control-prev, 
+#my_slider .carousel-control-prev,
 #my_slider .carousel-control-next {
     width: 55px;
     height: 55px;
@@ -431,14 +431,15 @@ menu_text {
 
 /* banner section end */
 
+
 /* protect section start */
 
-.protect_section{
+.protect_section {
     width: 100%;
     float: left;
 }
 
-.protect_taital{
+.protect_taital {
     width: 100%;
     float: left;
     font-size: 40px;
@@ -455,7 +456,7 @@ menu_text {
     text-align: center;
 }
 
-.protect_section_2{
+.protect_section_2 {
     width: 100%;
     float: left;
 }
@@ -469,11 +470,11 @@ menu_text {
     padding-top: 40px;
 }
 
-.hands_text a{
+.hands_text a {
     color: #081419;
 }
 
-.hands_text a:hover{
+.hands_text a:hover {
     color: #a258ed;
 }
 
@@ -496,11 +497,11 @@ menu_text {
     margin: 40px 80px;
 }
 
-.hands_text_2 a{
+.hands_text_2 a {
     color: #081419;
 }
 
-.hands_text_2 a:hover{
+.hands_text_2 a:hover {
     color: #a258ed;
 }
 
@@ -513,6 +514,7 @@ menu_text {
     right: -160px;
     border: 1px solid #111111;
 }
+
 
 /* protect section end */
 
@@ -572,36 +574,40 @@ menu_text {
     color: #fff;
 }
 
-.about_taital_main{
+.about_taital_main {
     width: 100%;
     float: left;
     padding: 100px 0px;
 }
-.about_menu{
+
+.about_menu {
     width: 100%;
     float: left;
 }
-.about_menu ul{
+
+.about_menu ul {
     margin: 0px;
     padding: 0px;
 }
-.about_menu li{
+
+.about_menu li {
     float: left;
     font-size: 18px;
     color: #ffffff;
     padding-right: 10px;
 }
 
-.about_menu li a{
+.about_menu li a {
     color: #ffffff;
 }
-.about_menu li a:hover{
+
+.about_menu li a:hover {
     color: #000;
 }
 
 
-
 /* about section end */
+
 
 /* doctor section start */
 
@@ -625,7 +631,7 @@ menu_text {
     padding-left: 100px;
 }
 
-.doctor_taital{
+.doctor_taital {
     width: 100%;
     float: left;
     font-size: 30px;
@@ -664,42 +670,40 @@ menu_text {
 }
 
 .play_icon {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 5;
-  text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    text-align: center;
 }
 
 .play_icon::before {
-  content: '';
-  position: absolute;
-  top: 38px;
-  left: 90px;
-  width: 90px;
-  height: 90px;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border-radius: 100%;
-  animation: fadeEffect 1.3s infinite ease;
-  box-shadow: 0px 0px 10px 0px;
-  right: 0px;
-  margin: 0 auto;
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 90px;
+    width: 90px;
+    height: 90px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 100%;
+    animation: fadeEffect 1.3s infinite ease;
+    box-shadow: 0px 0px 10px 0px;
+    right: 0px;
+    margin: 0 auto;
+    z-index: -1;
 }
 
 @keyframes fadeEffect {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0;
-  }
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
 }
-
-
 
 
 /* doctor section end */
@@ -728,7 +732,7 @@ menu_text {
 
 .news_text {
     width: 60%;
-    margin: 0 auto; 
+    margin: 0 auto;
     font-size: 16px;
     color: #151515;
     text-align: center;
@@ -736,7 +740,7 @@ menu_text {
 
 .news_section_2 {
     width: 100%;
-    float: left;   
+    float: left;
 }
 
 .box_main {
@@ -755,7 +759,6 @@ menu_text {
     position: relative;
     top: -20px;
 }
-
 
 .lorem_text {
     width: 100%;
@@ -800,7 +803,6 @@ menu_text {
     padding-top: 20px;
 }
 
-
 #main_slider a.carousel-control-prev {
     position: absolute;
     left: -60px;
@@ -817,7 +819,7 @@ menu_text {
     color: #ffffff;
 }
 
-#main_slider .carousel-control-prev, 
+#main_slider .carousel-control-prev,
 #main_slider .carousel-control-next {
     width: 55px;
     height: 55px;
@@ -841,6 +843,7 @@ menu_text {
 
 /* news section end */
 
+
 /* update section start */
 
 .update_section {
@@ -849,7 +852,7 @@ menu_text {
     padding-bottom: 100px;
 }
 
-.update_taital{
+.update_taital {
     width: 100%;
     font-size: 40px;
     color: #242424;
@@ -876,7 +879,6 @@ textarea#comment::placeholder {
     color: #969695;
 }
 
-
 .subscribe_bt {
     width: 200px;
     margin: 0 auto;
@@ -901,7 +903,9 @@ textarea#comment::placeholder {
     background-color: #3674f2;
 }
 
+
 /* update section end */
+
 
 /* footer section start */
 
@@ -990,6 +994,7 @@ textarea#comment::placeholder {
 
 /* footer section end */
 
+
 /* copyright section start */
 
 .copyright_section {
@@ -1007,6 +1012,7 @@ textarea#comment::placeholder {
     margin: 20px 0px;
     text-align: center;
 }
+
 .copyright_text a {
     color: #000;
 }
@@ -1018,6 +1024,6 @@ textarea#comment::placeholder {
 
 /* copyright section end */
 
-.margin_top90{
+.margin_top90 {
     margin-top: 90px;
 }
