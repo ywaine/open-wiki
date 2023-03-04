@@ -1,199 +1,161 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Dataset Viewer</title>
+    
+    <title>CSV Table with Search and Index</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        table {
+        /* CSS code for styling the table */
+        #csvTable {
             border-collapse: collapse;
             width: 100%;
-        }
-        
-        th,
-        td {
-            text-align: left;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-        
-        input[type=text] {
-            width: 100%;
-            padding: 12px 20px 8px 0;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        body {
             font-family: Arial, sans-serif;
-            font-size: 16px;
-            color: #333;
         }
         
-        h1,
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
+        #csvTable td, #csvTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
         }
         
-        form {
-            margin-bottom: 40px;
-        }
+        #csvTable tr:nth-child(even){background-color: #f2f2f2;}
         
-        button {
+        #csvTable tr:hover {background-color: #ddd;}
+        
+        #csvTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
             background-color: #4CAF50;
             color: white;
-            padding: 12px 20px;
+        }
+        
+        /* CSS code for the add row form */
+        
+        #addRowForm {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #addRowForm label {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        #addRowForm input[type="text"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        #addRowForm input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
         }
         
-        button:hover {
+        #addRowForm input[type="submit"]:hover {
             background-color: #45a049;
         }
         
-        input[type=text]:focus,
-        input[type=email]:focus,
-        input[type=number]:focus {
-            border: 2px solid #4CAF50;
+        #addRowForm input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
         }
         
-        #searchInput {
-            margin-bottom: 20px;
+        #addRowForm input[type="reset"]:hover {
+            background-color: #da190b;
         }
     </style>
 </head>
-
 <body>
-    <h1>Dataset Viewer</h1>
-    <input type="text" id="searchInput" placeholder="Search...">
-    <table id="dataTable">
+    <h1>CSV Table with Search and Index</h1>
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
+    <table id="csvTable">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Email</th>
+                <th>Index</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Link</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>John Smith</td>
-                <td>32</td>
-                <td>john.smith@example.com</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Jane Doe</td>
-                <td>27</td>
-                <td>jane.doe@example.com</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Bob Johnson</td>
-                <td>45</td>
-                <td>bob.johnson@example.com</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Alice Williams</td>
-                <td>29</td>
-                <td>alice.williams@example.com</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Michael Brown</td>
-                <td>38</td>
-                <td>michael.brown@example.com</td>
-            </tr>
         </tbody>
     </table>
-
-    <h2>Add Data Point</h2>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <button type="button" onclick="addDataPoint()">Add Data Point</button>
-    </form>
-
+    <div class="toolbox">
+        <h2>Add Row</h2>
+        <form id="addRowForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="column2">Description:</label>
+            <input type="text" id="column2" name="column2" required>
+            <label for="column3">Link:</label>
+            <input type="text" id="column3" name="column3" required>
+            <button type="submit" onclick="addRow()">Add</button>
+        </form>
+    </div>
     <script>
-        function addDataPoint() {
-            var nameInput = document.getElementById("name");
-            var ageInput = document.getElementById("age");
-            var emailInput = document.getElementById("email");
+        // Declare variables
+        var tableBody = document.getElementById("csvTable").getElementsByTagName('tbody')[0];
+        var rowIndex = 1;
 
-            // Get the table and insert a new row
-            var table = document.getElementById("dataTable");
-            var row = table.insertRow(-1);
+        function addRow() {
+            // Get form values
+            var title = document.getElementById("title").value;
+            var column2 = document.getElementById("column2").value;
+            var column3 = document.getElementById("column3").value;
 
-            // Insert the new row with data from the input fields
-            var id = table.rows.length - 1;
-            var idCell = row.insertCell(0);
-            var nameCell = row.insertCell(1);
-            var ageCell = row.insertCell(2);
-            var emailCell = row.insertCell(3);
-            idCell.innerHTML = id;
-            nameCell.innerHTML = nameInput.value;
-            ageCell.innerHTML = ageInput.value;
-            emailCell.innerHTML = emailInput.value;
+            // Create new table row and cells
+            var newRow = tableBody.insertRow(-1);
+            newRow.insertCell(0).textContent = rowIndex;
+            newRow.insertCell(1).textContent = title;
+            newRow.insertCell(2).textContent= column2;
+            newRow.insertCell(3).textContent = column3;
+            rowIndex++;
+        // Clear form inputs
+        document.getElementById("addRowForm").reset();
+    }
 
-            // Clear the input fields
-            nameInput.value = "";
-            ageInput.value = "";
-            emailInput.value = "";
+    function searchTable() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("csvTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            // Skip the table header row
+            if (i === 0) continue;
+
+            // Get the text content of the current row
+            td = tr[i].getElementsByTagName("td");
+            for (var j = 0; j < td.length; j++) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    break;
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
         }
-
-
-        // Get the input field
-        var input = document.getElementById("searchInput");
-
-        // Add event listener for input
-        input.addEventListener("input", function() {
-            searchTable();
-        });
-
-        function searchTable() {
-			// Declare variables
-			var input, filter, table, tr, td, i, j, txtValue;
-			input = document.getElementById("searchInput");
-			filter = input.value.toUpperCase();
-			table = document.getElementById("dataTable");
-			tr = table.getElementsByTagName("tr");
-
-			// Loop through all table rows, and hide those that don't match the search query
-			for (i = 0; i < tr.length; i++) {
-				// Loop through all table cells of the current row
-				for (j = 0; j < tr[i].cells.length; j++) {
-					td = tr[i].cells[j];
-					if (td) {
-						txtValue = td.textContent || td.innerText;
-						if (txtValue.toUpperCase().indexOf(filter) > -1) {
-							tr[i].style.display = "";
-							break; // break out of the inner loop since we found a match
-						} else {
-							tr[i].style.display = "none";
-						}
-					}
-				}
-			}
-		}
-
-    </script>
+    }
+</script>
 </body>
-
 </html>
