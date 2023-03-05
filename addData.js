@@ -23,7 +23,7 @@ function addRow() {
 	// titleInput.value = "";
 	// urlInput.value = "";
 	// descriptionInput.value = "";
-	// document.getElementById("addRowForm").reset();
+	document.getElementById("customform").reset();
 }
 
 
