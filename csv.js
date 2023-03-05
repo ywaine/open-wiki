@@ -14,7 +14,7 @@ function updateTable() {
 	let table = document.getElementById("csvTable");
 	
 	// (B) AJAX FETCH CSV FILE
-	fetch("opendata.csv")
+	fetch("open_data.csv")
 		.then(res => res.text())
 		.then(csv => {
 			// clear html table
