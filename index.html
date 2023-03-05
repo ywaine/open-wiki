@@ -3,6 +3,10 @@
 
 <head>
     <!-- basic -->
+    <script defer src="csv.js"></script>
+    <script defer src="searchTable.js"></script>
+    <script defer src="addData.js">
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,7 +116,7 @@
             margin-top: 10px;
         }
         
-        input[type=text]:focus input[type=email]:focus,
+        input[type=text]:focus input[type=description]:focus,
         input[type=number]:focus {
             border: 2px solid #4CAF50;
         }
@@ -121,8 +125,10 @@
             background-color: #da190b;
         }
     </style>
-    <script defer src="csv.js"></script>
-    <script defer src="searchTable.js"></script>
+    <<<<<<< HEAD <script defer src="csv.js">
+        </script>
+        <script defer src="searchTable.js"></script>
+        ======= >>>>>>> d07fdee79b10ab637f088d9fc697fcaa5dd4f6aa
 </head>
 
 <body>
@@ -208,47 +214,7 @@
             </div>
             <div class="protect_section_2 layout_padding">
                 <div class="row">
-                    <table id="dataTable">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Age</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>John Smith</td>
-                                <td>32</td>
-                                <td>john.smith@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jane Doe</td>
-                                <td>27</td>
-                                <td>jane.doe@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Bob Johnson</td>
-                                <td>45</td>
-                                <td>bob.johnson@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Alice Williams</td>
-                                <td>29</td>
-                                <td>alice.williams@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Michael Brown</td>
-                                <td>38</td>
-                                <td>michael.brown@example.com</td>
-                            </tr>
-                        </tbody>
+                    <table id="csvTable">
                     </table>
                     <!-- Commented this code so that we can have the searhc and data in one section -->
                     <!-- <div class="col-md-6"> -->
@@ -273,18 +239,18 @@
                 <!-- <div class="col-md-5"> -->
                 <!-- <div class="about_img"><img src="images/img-1.png"></div> -->
                 <!-- </div> -->
-                <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                <div class="customform">
+                    <label for="title">title:</label>
+                    <input type="text" id="title" name="title" required>
 
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" required>
+                    <label for="url">url:</label>
+                    <input type="text" id="url" name="url" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="description">description:</label>
+                    <input type="text" id="description" name="description" required>
 
-                    <button type="button" onclick="addDataPoint()">Add Data Point</button>
-                </form>
+                    <button type="button" onclick="addRow()">Add Data Point</button>
+                </div>
                 <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
             </div>
         </div>
@@ -336,9 +302,9 @@
     <!-- Our code here -->
     <script>
         function addDataPoint() {
-            var nameInput = document.getElementById("name");
-            var ageInput = document.getElementById("age");
-            var emailInput = document.getElementById("email");
+            var titleInput = document.getElementById("title");
+            var urlInput = document.getElementById("url");
+            var descriptionInput = document.getElementById("description");
 
             // Get the table and insert a new row
             var table = document.getElementById("dataTable");
@@ -347,18 +313,18 @@
             // Insert the new row with data from the input fields
             var id = table.rows.length - 1;
             var idCell = row.insertCell(0);
-            var nameCell = row.insertCell(1);
-            var ageCell = row.insertCell(2);
-            var emailCell = row.insertCell(3);
+            var titleCell = row.insertCell(1);
+            var urlCell = row.insertCell(2);
+            var descriptionCell = row.insertCell(3);
             idCell.innerHTML = id;
-            nameCell.innerHTML = nameInput.value;
-            ageCell.innerHTML = ageInput.value;
-            emailCell.innerHTML = emailInput.value;
+            titleCell.innerHTML = titleInput.value;
+            urlCell.innerHTML = urlInput.value;
+            descriptionCell.innerHTML = descriptionInput.value;
 
             // Clear the input fields
-            nameInput.value = "";
-            ageInput.value = "";
-            emailInput.value = "";
+            titleInput.value = "";
+            urlInput.value = "";
+            descriptionInput.value = "";
         }
 
 
