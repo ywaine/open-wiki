@@ -31,22 +31,32 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
         /* CSS code for styling the table */
+        
         #csvTable {
             border-collapse: collapse;
             width: 100%;
             font-family: Arial, sans-serif;
         }
         
-        #csvTable td, #csvTable th {
+        #csvTable td,
+        #csvTable th {
             border: 1px solid #ddd;
             padding: 8px;
         }
         
-        #csvTable tr:nth-child(even){background-color: #f2f2f2;}
+        #csvTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
         
-        #csvTable tr:hover {background-color: #ddd;}
+        #csvTable tr:hover {
+            background-color: #ddd;
+        }
         
         #csvTable th {
             padding-top: 12px;
@@ -55,7 +65,6 @@
             background-color: #4CAF50;
             color: white;
         }
-        
         /* CSS code for the add row form */
         
         #addRowForm {
@@ -93,7 +102,6 @@
             background-color: #45a049;
         }
         
-
         #addRowForm input[type="reset"] {
             background-color: #f44336;
             color: white;
@@ -103,20 +111,20 @@
             cursor: pointer;
             margin-top: 10px;
         }
-
+        
         input[type=text]:focus input[type=email]:focus,
         input[type=number]:focus {
             border: 2px solid #4CAF50;
-
         }
         
         #addRowForm input[type="reset"]:hover {
             background-color: #da190b;
         }
     </style>
-	<script defer src="csv.js"></script>
-	<script defer src="searchTable.js"></script>
+    <script defer src="csv.js"></script>
+    <script defer src="searchTable.js"></script>
 </head>
+
 <body>
 
     <!--header section start -->
@@ -253,6 +261,7 @@
         </div>
     </div>
     <!-- protect section end -->
+    <hr>
     <!-- about section start -->
     <div class="about_section layout_padding">
         <div class="container">
@@ -306,7 +315,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <p class="copyright_text">Creative Commons 2023 <a href="https://html.design"> An OpenSearch31 website</a></p>
+                    <p class="copyright_text">Creative Commons 2023. <a href="https://html.design"> An OpenSearch31 website</a></p>
                 </div>
             </div>
         </div>
@@ -410,4 +419,5 @@
     </script>
 
 </body>
+
 </html>
