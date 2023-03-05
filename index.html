@@ -80,6 +80,8 @@
             background-color: #da190b;
         }
     </style>
+	<script defer src="csv.js"></script>
+	<script defer src="searchTable.js"></script>
 </head>
 <body>
     <h1>CSV Table with Search and Index</h1>
@@ -101,10 +103,10 @@
         <form id="addRowForm">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required>
-            <label for="column2">Description:</label>
-            <input type="text" id="column2" name="column2" required>
-            <label for="column3">Link:</label>
-            <input type="text" id="column3" name="column3" required>
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
             <button type="submit" onclick="addRow()">Add</button>
         </form>
     </div>
@@ -116,46 +118,19 @@
         function addRow() {
             // Get form values
             var title = document.getElementById("title").value;
-            var column2 = document.getElementById("column2").value;
-            var column3 = document.getElementById("column3").value;
+            var url = document.getElementById("url").value;
+            var description = document.getElementById("description").value;
 
             // Create new table row and cells
             var newRow = tableBody.insertRow(-1);
             newRow.insertCell(0).textContent = rowIndex;
             newRow.insertCell(1).textContent = title;
-            newRow.insertCell(2).textContent= column2;
-            newRow.insertCell(3).textContent = column3;
+            newRow.insertCell(2).textContent= url;
+            newRow.insertCell(3).textContent = description;
             rowIndex++;
-        // Clear form inputs
-        document.getElementById("addRowForm").reset();
-    }
-
-    function searchTable() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("searchInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("csvTable");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-            // Skip the table header row
-            if (i === 0) continue;
-
-            // Get the text content of the current row
-            td = tr[i].getElementsByTagName("td");
-            for (var j = 0; j < td.length; j++) {
-                txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                    break;
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    }
-</script>
+			// Clear form inputs
+			document.getElementById("addRowForm").reset();
+		}
+	</script>
 </body>
 </html>
