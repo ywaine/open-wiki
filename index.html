@@ -30,72 +30,95 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
     <style>
-        table {
+        /* CSS code for styling the table */
+        #csvTable {
             border-collapse: collapse;
             width: 100%;
-        }
-        
-        th,
-        td {
-            text-align: left;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-        
-        input[type=text] {
-            width: 100%;
-            padding: 12px 20px 8px 0;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        body {
             font-family: Arial, sans-serif;
-            font-size: 16px;
-            color: #333;
         }
         
-        h1,
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
+        #csvTable td, #csvTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
         }
         
-        form {
-            margin-bottom: 40px;
-        }
+        #csvTable tr:nth-child(even){background-color: #f2f2f2;}
         
-        button {
+        #csvTable tr:hover {background-color: #ddd;}
+        
+        #csvTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
             background-color: #4CAF50;
             color: white;
-            padding: 12px 20px;
+        }
+        
+        /* CSS code for the add row form */
+        
+        #addRowForm {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #addRowForm label {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        #addRowForm input[type="text"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        #addRowForm input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
         }
         
-        button:hover {
+        #addRowForm input[type="submit"]:hover {
             background-color: #45a049;
         }
         
+
+        #addRowForm input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
         input[type=text]:focus input[type=email]:focus,
         input[type=number]:focus {
             border: 2px solid #4CAF50;
+
         }
         
-        #searchInput {
-            margin-bottom: 20px;
+        #addRowForm input[type="reset"]:hover {
+            background-color: #da190b;
         }
     </style>
+	<script defer src="csv.js"></script>
+	<script defer src="searchTable.js"></script>
 </head>
-
 <body>
+
     <!--header section start -->
     <div class="header_section">
         <div class="container-fluid">
@@ -387,5 +410,4 @@
     </script>
 
 </body>
-
 </html>
