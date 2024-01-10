@@ -1,5 +1,10 @@
-# open-search
-42 Heilbronn Hackathon 
+# Notable contributors
+Chris
+Jascha
+Denice
+
+# open-wiki
+42 Heilbronn Hackathon
 
 ## Collab here
 View: https://justpaste.it/4xd6q
