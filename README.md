@@ -1,5 +1,5 @@
 # Notable contributors
-Chris
+Christopher
 Jascha
 Denice
 
