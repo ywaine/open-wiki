@@ -1,10 +1,14 @@
+# open-wiki
+42 Heilbronn Hackathon
+
 # Notable contributors
 Christopher
 Jascha
 Denice
 
-# open-wiki
-42 Heilbronn Hackathon
+### Roles
+Algorithms Back-end Christopher, Denice
+JS Front-end Jascha, Antony 
 
 ## Collab here
 View: https://justpaste.it/4xd6q
