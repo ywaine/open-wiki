@@ -7,8 +7,7 @@ Jascha
 Denice
 
 ### Roles
-Algorithms Back-end Christopher, Denice
-JS Front-end Jascha, Antony 
+Algorithms (Back-end) Christopher, Denice | JS (Front-end) Jascha, Antony 
 
 ## Collab here
 View: https://justpaste.it/4xd6q
