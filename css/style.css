@@ -221,9 +221,9 @@ button {
 
 .header_section {
     width: 100%;
+    height: 100%;
     float: left;
     background-image: url(../images/banner-bg.png);
-    height: auto;
     height: auto;
     padding: 20px 0px;
     background-size: 100%;
@@ -363,8 +363,8 @@ menu_text {
 .banner_text {
     width: 80%;
     float: left;
-    font-size: 16px;
-    color: #fef6fc;
+    font-size: 22px;
+    color: #000000;
     margin: 20px 0px 0px 0px;
 }
 
