@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>OpenSearch31</title>
+    <title>Open31</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,7 +25,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- <link rel="icon" href="images/fevicon.png" type="image/gif" /> -->
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
@@ -35,9 +35,9 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <style>
         /* CSS code for styling the table */
@@ -125,9 +125,10 @@
             background-color: #da190b;
         }
     </style>
-    <<<<<<< HEAD<script defer src="csv.js">
-        </script>
-        <script defer src="searchTable.js"></script>
+    <script defer src="csv.js">
+    </script>
+    <script defer src="searchTable.js"></script>
+    ======= >>>>>>> d07fdee79b10ab637f088d9fc697fcaa5dd4f6aa
 </head>
 
 <body>
@@ -154,9 +155,9 @@
                         <div id="myNav" class="overlay">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
-                                <a href="index.html">Home</a>
-                                <a href="protect.html">search data</a>
-                                <a href="about.html">add data</a>
+                                <a href="index.html">home</a>
+                                <a href="#search">search data</a>
+                                <a href="#add">add data</a>
                                 <!-- <a href="doctors.html">remove</a> -->
                                 <!-- <a href="news.html">News</a> -->
                             </div>
@@ -179,9 +180,9 @@
                                     <div class="container">
                                         <h1 class="banner_taital">Search the Open31</h1>
                                         <p style="background-color: #f2f2f2" class="banner_text">
-                                            This website lets you access data to the ESG ratings by industry of every city in Europe. We have many sites, search by city, title, and label.
+                                            This website lets you access data to the ESG ratings by industry of every city in Europe. Contribute to the open source database wiki repository.
                                         </p>
-                                        <div class="more_bt"><a href="#protect_section layout_padding">Surf now</a></div>
+                                        <div class="more_bt"><a href="#search">Surf now</a></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -203,7 +204,7 @@
     </div>
     <!-- header section end -->
     <!-- protect section start -->
-    <div class="protect_section layout_padding">
+    <div class="protect_section layout_padding" id="search">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -230,11 +231,12 @@
     <!-- protect section end -->
     <hr>
     <!-- about section start -->
-    <div class="about_section layout_padding">
+    <div class="about_section layout_padding" id="add">
         <div class="container">
             <div class="row">
                 <h1 class="about_taital">
                     Add Data Point
+                    <p>Contribute with your data...</p>
                     </span>
                 </h1>
                 <!-- <div class="col-md-5"> -->
@@ -282,7 +284,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <p class="copyright_text">Creative Commons 2023. <a href="https://html.design"> An Open31 website</a></p>
+                    <p class="copyright_text">Creative Commons 2023. <a href="https://html.design"> An OpenWiki website</a></p>
                 </div>
             </div>
         </div>
